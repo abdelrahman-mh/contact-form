@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+// const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
@@ -38,11 +38,11 @@ module.exports = (env, argv) => {
         title: 'Our Project',
         template: 'src/index.html',
       }),
-      new CopyPlugin({
-        patterns: [
-          { from: 'src/assets', to: 'assets/img' }, // Simplified to avoid leading slash
-        ],
-      }),
+      // new CopyPlugin({
+      //   patterns: [
+      //     { from: 'src/assets', to: 'assets/img' }, // Simplified to avoid leading slash
+      //   ],
+      // }),
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(argv.mode), // Add environment variables
       }),

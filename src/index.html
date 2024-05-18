@@ -1,22 +1,145 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
 
-  Contact Us
+    <title>Contact form</title>
+  </head>
+  <body
+    class="flex min-h-lvh items-center justify-center bg-lightGreen px-4 py-8 font-karla font-normal"
+  >
+    <form class="contact-form w-full max-w-[736px] rounded-2xl bg-white p-10">
+      <h1 class="text-2xl font-bold">Contact Us</h1>
+
+      <div class="form-group mt-8 justify-stretch gap-4 text-darkGrey sm:flex">
+        <div class="flex-1">
+          <label for="firstName" class="required mb-2 inline-block text-base"
+            >First Name</label
+          >
+          <input
+            class="w-full rounded-lg border border-mediumGrey px-[20px] py-[10px] text-lg hover:border-green focus:border-green"
+            type="text"
+            id="firstName"
+            name="firstName"
+            required
+          />
+        </div>
+        <div class="mt-[30px] flex-1 sm:mt-0">
+          <label class="required mb-2 inline-block text-base" for="lastName"
+            >Last Name</label
+          >
+          <input
+            class="w-full rounded-lg border border-mediumGrey px-[20px] py-[10px] text-lg hover:border-green focus:border-green"
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="form-group mt-8 text-darkGrey">
+        <label class="required mb-2 inline-block text-base" for="email"
+          >Email Address</label
+        >
+        <input
+          class="w-full rounded-lg border border-mediumGrey px-[20px] py-[10px] text-lg hover:border-green focus:border-green"
+          type="email"
+          id="email"
+          name="email"
+          required
+        />
+      </div>
+
+      <div class="form-group mt-8 text-darkGrey">
+        <label for="query-type" class="required mb-2 inline-block text-base"
+          >Query Type</label
+        >
+        <div id="query-type" class="radio-group justify-stretch gap-4 sm:flex">
+          <div class="relative flex-1">
+            <input
+              type="radio"
+              id="general"
+              name="queryType"
+              value="general"
+              class="peer absolute left-5 top-1/2 z-10 h-5 w-5 -translate-y-1/2 transform accent-green"
+              required
+            />
+            <label
+              for="general"
+              class="relative flex cursor-pointer items-center rounded-lg border border-mediumGrey px-[20px] py-[10px] pl-11 text-lg peer-checked:border-green peer-checked:bg-lightGreen"
+            >
+              General Enquiry
+            </label>
+          </div>
+          <div class="relative mt-4 flex-1 sm:mt-0">
+            <input
+              type="radio"
+              id="support"
+              name="queryType"
+              value="support"
+              class="peer absolute left-5 top-1/2 z-10 h-5 w-5 -translate-y-1/2 transform accent-green"
+              required
+            />
+            <label
+              for="support"
+              class="relative flex cursor-pointer items-center rounded-lg border border-mediumGrey px-[20px] py-[10px] pl-11 text-lg peer-checked:border-green peer-checked:bg-lightGreen"
+            >
+              Support Request
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mt-8">
+        <label class="required mb-2 inline-block text-base" for="message"
+          >Message</label
+        >
+        <textarea
+          id="message"
+          name="message"
+          class="h-[238px] w-full resize-none rounded-lg border border-mediumGrey px-[20px] py-[10px] hover:border-green focus:border-green sm:h-[103px]"
+          required
+        ></textarea>
+      </div>
+      <div class="form-group mb-6 mt-8 flex items-center gap-4">
+        <input
+          type="checkbox"
+          class="text-blue-600 border-gray-300 focus:ring-blue-200 h-5 w-5 cursor-pointer rounded text-lg accent-green focus:ring"
+          id="accept-privacy"
+          name="accept-privacy"
+        />
+        <label
+          for="accept-privacy"
+          class="required inline-block cursor-pointer text-base"
+          >I consent to being contacted by the team</label
+        >
+      </div>
+      <div class="form-group mt-8">
+        <button
+          type="submit"
+          class="w-full rounded-lg bg-green py-3 font-bold text-white hover:bg-darkGreen"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+    <!-- Contact Us
 
   First Name
   This field is required
@@ -42,11 +165,6 @@
   Submit
 
   Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  Thanks for completing the form. We'll be in touch soon! -->
+  </body>
 </html>
