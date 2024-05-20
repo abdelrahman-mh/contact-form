@@ -49,11 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
         form.reset();
       } else {
         console.error("Validation errors:", result.error.errors);
-        displayErrors(result.error.errors);
+        displayFiledErrors(result.error.errors);
       }
     });
 
-    // Clear error messages on input change
+    // Clear error messages when input change
     form
       .querySelectorAll<
         HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function displayErrors(errors: z.ZodIssue[]) {
+function displayFiledErrors(errors: z.ZodIssue[]) {
   errors.forEach((error) => {
     const fieldName = error.path[0] as string;
     const errorMessage = error.message;
